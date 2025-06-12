@@ -46,14 +46,12 @@ Kutuphane_Takip_Sistem/
 
 ## 📷 Ekran Görüntüleri
 
->
-> ```markdown
->![Screenshot 2025-06-12 204839](https://github.com/user-attachments/assets/f5e04cf4-4952-405c-b1c8-6ad8809479e4)
-> 
-> ![Screenshot 2025-06-12 204904](https://github.com/user-attachments/assets/eb133c41-202d-46e9-be92-2d4cd858bfba)
-> 
-> ![Screenshot 2025-06-12 204934](https://github.com/user-attachments/assets/03d298c6-9a77-444e-9832-e92faeab7d7c)
-> ```
+![Screenshot 2025-06-12 204839](https://github.com/user-attachments/assets/f5e04cf4-4952-405c-b1c8-6ad8809479e4)
+ 
+![Screenshot 2025-06-12 204904](https://github.com/user-attachments/assets/eb133c41-202d-46e9-be92-2d4cd858bfba)
+ 
+![Screenshot 2025-06-12 204934](https://github.com/user-attachments/assets/03d298c6-9a77-444e-9832-e92faeab7d7c)
+
 
 ## 🔧 Kurulum
 
