@@ -10,36 +10,26 @@ using System.Windows.Forms;
 
 namespace Kutuphane_Takip_Sistem
 {
-    public partial class Form1 : Form
+    public partial class Form4 : Form
     {
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Veritabani.Kaydet();
-        }
-
-        public Form1()
+        public Form4()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            string girilenNo = txtGirilenNo.Text;
-            string girilenSifre = txtGirilenSifre.Text;
+            string girilenNo = txtGirilenNoOgr.Text;
+            string girilenSifre = txtGirilenSifreOgr.Text;
 
-            var ogrenci = Veritabani.OgrenciListesi
+            var ogretmen = Veritabani.OgretmenListesi
                     .FirstOrDefault(o => o.Numara == girilenNo && o.Sifre == girilenSifre);
 
-            if (ogrenci != null)
+            if (ogretmen != null)
             {
-                MessageBox.Show($"Hoş geldin {ogrenci.Ad}!");
-                OgrenciEkran ogrenciEkran = new OgrenciEkran(ogrenci);
-                ogrenciEkran.Show();
+                MessageBox.Show($"Hoş geldin {ogretmen.Ad}!");
+                OgretmenEkran ogretmenEkran = new OgretmenEkran();
+                ogretmenEkran.Show();
                 this.Hide();
             }
             else
