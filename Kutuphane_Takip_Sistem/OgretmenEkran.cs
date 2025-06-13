@@ -115,5 +115,35 @@ namespace Kutuphane_Takip_Sistem
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Lütfen silmek istediğiniz kitabı seçin.");
+                return;
+            }
+
+            string secilenIsbn = listView2.SelectedItems[0].SubItems[0].Text;
+
+            var kitap = Veritabani.KitapListesi.FirstOrDefault(k => k.ISBN == secilenIsbn);
+
+            if (kitap != null)
+            {
+                DialogResult result = MessageBox.Show($"'{kitap.Ad}' kitabını silmek istediğinize emin misiniz?",
+                    "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    Veritabani.KitapListesi.Remove(kitap);
+
+                    Veritabani.Kaydet();
+
+                    OgretmenEkran_Load(null, null);
+
+                    MessageBox.Show("Kitap başarıyla silindi.");
+                }
+            }
+        }
     }
 }
